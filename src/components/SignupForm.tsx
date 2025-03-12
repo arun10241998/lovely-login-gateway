@@ -49,10 +49,10 @@ const SignupForm = () => {
       // Reset form after submission
       form.reset();
       
-      // Redirect to login page after successful registration
+      // Redirect to role selection page after successful registration
       setTimeout(() => {
-        navigate('/');
-      }, 2000);
+        navigate('/role-selection');
+      }, 1500);
     } catch (error) {
       toast({
         title: "Error",
@@ -75,6 +75,11 @@ const SignupForm = () => {
         title: "Social Signup",
         description: `Attempted signup with ${provider}`,
       });
+      
+      // Redirect to role selection page after successful social registration
+      setTimeout(() => {
+        navigate('/role-selection');
+      }, 1500);
     } catch (error) {
       toast({
         title: "Error",
